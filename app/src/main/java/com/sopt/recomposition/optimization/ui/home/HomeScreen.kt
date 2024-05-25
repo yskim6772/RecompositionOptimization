@@ -89,7 +89,8 @@ fun ColumnScope.MemoList(memoList: SnapshotStateList<Memo>) {
             .weight(1f)
     ) {
         items(
-            items = memoList
+            items = memoList,
+            key = { memo -> memo.id }
         ) { memo ->
             Card(
                 modifier = Modifier
